@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mental_health_app.HomeFragment"
+        android:label="@string/home_page"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_yoga"
+        android:name="com.example.mental_health_app.yoga.view.YogaFragment"
+        android:label="@string/yoga_page"
+        tools:layout="@layout/fragment_yoga">
+        <action
+            android:id="@+id/action_navigation_yoga_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_journal"
+        android:name="com.example.mental_health_app.JournalFragment"
+        android:label="@string/journal_page"
+        tools:layout="@layout/fragment_journal">
+        <action
+            android:id="@+id/action_navigation_journal_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.mental_health_app.ProfileFragment"
+        android:label="@string/profile_page"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.mental_health_app.SettingsFragment"
+        android:label="@string/settings_page"
+        tools:layout="@layout/fragment_settings"
+        />
+
+</navigation>
